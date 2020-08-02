@@ -13,7 +13,7 @@ RUN cd /python && ./configure
 RUN cd /python && make -j 8
 RUN cd /python && make -j 8 install
 RUN alias python='python3'
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["python3.8"]
 
 # FROM scratch
 # COPY --from=0 /usr/share/nmap/nmap /usr/bin/nmap
