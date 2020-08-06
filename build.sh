@@ -57,7 +57,7 @@ git () {
     git="/usr/bin/git -C /home/docker/python_3.8.5/"
     $git pull git@github.com:blairjames/python_3.8.5.git >> $log || except "git pull failed!"
     $git add --all >> $log || except "git add failed!"
-    $git commit -a -m 'Automatic build $timestp' >> $log || except "git commit failed!"
+    $git commit -a -m 'Automatic build '$timestp >> $log || except "git commit failed!"
     $git push >> $log || except "git push failed!"
 }
 
