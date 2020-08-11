@@ -12042,3 +12042,59 @@ Successfully tagged blairy/python_3.8.5:20200811_122201
 
 
 Already up to date.
+[master 43af75c] Automatic build 20200811_122201
+ 2 files changed, 996 insertions(+), 2 deletions(-)
+20200811_122209 - git completed successfully.
+The push refers to repository [docker.io/blairy/python_3.8.5]
+3bd22ab591cc: Preparing
+f3deec4dbfeb: Preparing
+747675a095cc: Preparing
+f4b2de7c9a20: Preparing
+c1b185a9f284: Preparing
+97dd86e3ca0c: Preparing
+c4dd0bbcd71f: Preparing
+b343ddcee16c: Preparing
+50644c29ef5a: Preparing
+97dd86e3ca0c: Waiting
+c4dd0bbcd71f: Waiting
+b343ddcee16c: Waiting
+f4b2de7c9a20: Pushed
+3bd22ab591cc: Pushed
+20200811_122843 - Starting Build.
+
+Sending build context to Docker daemon  3.147MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     py3-pip make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 229f99a54ed7
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> dced08def2a3
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> 128d08a3e5a2
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> c619eb6db3a4
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 08ec4c0263b3
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> fab99404e700
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Using cache
+ ---> 558436124bf0
+Step 10/10 : ENTRYPOINT ["python3.8"]
+ ---> Using cache
+ ---> 1b7665e1124f
+Successfully built 1b7665e1124f
+Successfully tagged blairy/python_3.8.5:20200811_122843
+20200811_122843 - Build completed successfully.
+
+
+Already up to date.
