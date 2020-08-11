@@ -11048,3 +11048,997 @@ Successfully tagged blairy/python_3.8.5:20200810_092601
 
 
 Already up to date.
+[master e1b7411] Automatic build 20200810_092601
+ 1 file changed, 66 insertions(+)
+20200810_092610 - git completed successfully.
+The push refers to repository [docker.io/blairy/python_3.8.5]
+fd0e7f89fb75: Preparing
+0171a6524714: Preparing
+a122d8ec09be: Preparing
+057a0a11b1cd: Preparing
+a6efc444afea: Preparing
+988875d15cd7: Preparing
+b343ddcee16c: Preparing
+50644c29ef5a: Preparing
+b343ddcee16c: Waiting
+50644c29ef5a: Waiting
+988875d15cd7: Waiting
+a6efc444afea: Layer already exists
+fd0e7f89fb75: Layer already exists
+a122d8ec09be: Layer already exists
+057a0a11b1cd: Layer already exists
+0171a6524714: Layer already exists
+b343ddcee16c: Layer already exists
+988875d15cd7: Layer already exists
+50644c29ef5a: Layer already exists
+20200810_092601: digest: sha256:0a1a548769742cde38babd3fed49fc480d44e1f31f3ea059f6ef6d4bb5169454 size: 2009
+20200810_092617 - Docker push completed successfully.
+
+
+20200810_092617 - All completed successfully
+20200810_095342 - Starting Build.
+
+Sending build context to Docker daemon  3.085MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 8680f81e968a
+[91m/bin/sh: pip: not found
+[0m20200810_095343 - Build FAILED!! Aborting.
+
+
+20200810_102601 - Starting Build.
+
+Sending build context to Docker daemon  3.086MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 98b65ef4a475
+[91m/bin/sh: pip: not found
+[0m20200810_102602 - Build FAILED!! Aborting.
+
+
+20200810_103331 - Starting Build.
+
+Sending build context to Docker daemon  3.087MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 6c8fc3d6fe1f
+[91m/bin/sh: pip: not found
+[0m20200810_103332 - Build FAILED!! Aborting.
+
+
+20200810_112201 - Starting Build.
+
+Sending build context to Docker daemon  3.088MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in f055b63db820
+[91m/bin/sh: pip: not found
+[0m20200810_112202 - Build FAILED!! Aborting.
+
+
+20200810_122201 - Starting Build.
+
+Sending build context to Docker daemon   3.09MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 8eadbee1bf60
+[91m/bin/sh: pip: not found
+[0m20200810_122202 - Build FAILED!! Aborting.
+
+
+20200810_132201 - Starting Build.
+
+Sending build context to Docker daemon  3.091MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in c15993ddff58
+[91m/bin/sh: pip: not found
+[0m20200810_132202 - Build FAILED!! Aborting.
+
+
+20200810_142201 - Starting Build.
+
+Sending build context to Docker daemon  3.092MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in a7b28eddcd93
+[91m/bin/sh: pip: not found
+[0m20200810_142214 - Build FAILED!! Aborting.
+
+
+20200810_152201 - Starting Build.
+
+Sending build context to Docker daemon  3.094MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 9ea5bc01933c
+[91m/bin/sh: pip: not found
+[0m20200810_152203 - Build FAILED!! Aborting.
+
+
+20200810_162201 - Starting Build.
+
+Sending build context to Docker daemon  3.095MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 7ecd32f6bd60
+[91m/bin/sh: pip: not found
+[0m20200810_162202 - Build FAILED!! Aborting.
+
+
+20200810_172201 - Starting Build.
+
+Sending build context to Docker daemon  3.096MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 05002138686e
+[91m/bin/sh: pip: not found
+[0m20200810_172202 - Build FAILED!! Aborting.
+
+
+20200810_182201 - Starting Build.
+
+Sending build context to Docker daemon  3.097MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in c71230ddc6f2
+[91m/bin/sh: pip: not found
+[0m20200810_182202 - Build FAILED!! Aborting.
+
+
+20200810_192201 - Starting Build.
+
+Sending build context to Docker daemon  3.098MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in f226b0e0ea7a
+[91m/bin/sh: pip: not found
+[0m20200810_192202 - Build FAILED!! Aborting.
+
+
+20200810_202201 - Starting Build.
+
+Sending build context to Docker daemon    3.1MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 04b7fd2d1177
+[91m/bin/sh: pip: not found
+[0m20200810_202202 - Build FAILED!! Aborting.
+
+
+20200810_212201 - Starting Build.
+
+Sending build context to Docker daemon  3.101MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 8afc118f17fe
+[91m/bin/sh: pip: not found
+[0m20200810_212202 - Build FAILED!! Aborting.
+
+
+20200810_222201 - Starting Build.
+
+Sending build context to Docker daemon  3.102MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 3842aba479ed
+[91m/bin/sh: pip: not found
+[0m20200810_222202 - Build FAILED!! Aborting.
+
+
+20200810_232201 - Starting Build.
+
+Sending build context to Docker daemon  3.103MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 78b83a88114d
+[91m/bin/sh: pip: not found
+[0m20200810_232202 - Build FAILED!! Aborting.
+
+
+20200811_002201 - Starting Build.
+
+Sending build context to Docker daemon  3.104MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in bae309241cc6
+[91m/bin/sh: pip: not found
+[0m20200811_002203 - Build FAILED!! Aborting.
+
+
+20200811_012201 - Starting Build.
+
+Sending build context to Docker daemon  3.106MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 5bf089482f17
+[91m/bin/sh: pip: not found
+[0m20200811_012203 - Build FAILED!! Aborting.
+
+
+20200811_022201 - Starting Build.
+
+Sending build context to Docker daemon  3.107MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in ccea464e1647
+[91m/bin/sh: pip: not found
+[0m20200811_022202 - Build FAILED!! Aborting.
+
+
+20200811_032201 - Starting Build.
+
+Sending build context to Docker daemon  3.108MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in ffae44396ebb
+[91m/bin/sh: pip: not found
+[0m20200811_032202 - Build FAILED!! Aborting.
+
+
+20200811_042201 - Starting Build.
+
+Sending build context to Docker daemon  3.109MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 4afee8b29f6d
+[91m/bin/sh: pip: not found
+[0m20200811_042202 - Build FAILED!! Aborting.
+
+
+20200811_052201 - Starting Build.
+
+Sending build context to Docker daemon   3.11MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in e447c4583c5a
+[91m/bin/sh: pip: not found
+[0m20200811_052202 - Build FAILED!! Aborting.
+
+
+20200811_062201 - Starting Build.
+
+Sending build context to Docker daemon  3.112MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 888d9df53bd9
+[91m/bin/sh: pip: not found
+[0m20200811_062201 - Build FAILED!! Aborting.
+
+
+20200811_072201 - Starting Build.
+
+Sending build context to Docker daemon  3.113MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in ba35e4b8f61a
+[91m/bin/sh: pip: not found
+[0m20200811_072202 - Build FAILED!! Aborting.
+
+
+20200811_082201 - Starting Build.
+
+Sending build context to Docker daemon  3.114MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 6a3a61935167
+[91m/bin/sh: pip: not found
+[0m20200811_082202 - Build FAILED!! Aborting.
+
+
+20200811_092201 - Starting Build.
+
+Sending build context to Docker daemon  3.116MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in c8cc3a653550
+[91m/bin/sh: pip: not found
+[0m20200811_092202 - Build FAILED!! Aborting.
+
+
+20200811_102201 - Starting Build.
+
+Sending build context to Docker daemon  3.117MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 9269e8a96011
+[91m/bin/sh: pip: not found
+[0m20200811_102202 - Build FAILED!! Aborting.
+
+
+20200811_112201 - Starting Build.
+
+Sending build context to Docker daemon  3.118MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in cecae932b835
+[91m/bin/sh: pip: not found
+[0m20200811_112202 - Build FAILED!! Aborting.
+
+
+20200811_115638 - Starting Build.
+
+Sending build context to Docker daemon  3.119MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 40e142d9168a
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> c5e78eb2d286
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> aa76f9971551
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> e1d2a38b5b9e
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 4afdb78bb91b
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> 0a8961677bdc
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Running in 879047451f73
+[91m/bin/sh: pip: not found
+[0m20200811_115639 - Build FAILED!! Aborting.
+
+
+20200811_122201 - Starting Build.
+
+Sending build context to Docker daemon  3.121MB
+Step 1/10 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/10 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/10 : RUN apk add --no-cache     py3-pip make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 229f99a54ed7
+Step 4/10 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> dced08def2a3
+Step 5/10 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> 128d08a3e5a2
+Step 6/10 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> c619eb6db3a4
+Step 7/10 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 08ec4c0263b3
+Step 8/10 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> fab99404e700
+Step 9/10 : RUN pip install bs4 && pip install requests
+ ---> Using cache
+ ---> 558436124bf0
+Step 10/10 : ENTRYPOINT ["python3.8"]
+ ---> Using cache
+ ---> 1b7665e1124f
+Successfully built 1b7665e1124f
+Successfully tagged blairy/python_3.8.5:20200811_122201
+20200811_122201 - Build completed successfully.
+
+
+Already up to date.

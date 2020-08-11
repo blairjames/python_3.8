@@ -1,7 +1,7 @@
 FROM alpine:latest
 RUN apk update && apk upgrade
 RUN apk add --no-cache \
-    make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev \
+    py3-pip make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev \
     llvm readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils 
 RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
 RUN \
@@ -12,7 +12,7 @@ RUN \
 RUN cd /python && ./configure
 RUN cd /python && make -j 8
 RUN cd /python && make -j 8 install
-RUN alias python='python3'
+RUN pip install bs4 && pip install requests
 ENTRYPOINT ["python3.8"]
 
 # FROM scratch
