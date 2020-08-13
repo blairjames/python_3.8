@@ -28835,3 +28835,83 @@ Successfully tagged blairy/python_3.8.5:20200813_104056
 
 
 Already up to date.
+[master 8c30a8b] Automatic build 20200813_104056
+ 2 files changed, 13778 insertions(+), 12 deletions(-)
+20200813_104551 - git completed successfully.
+The push refers to repository [docker.io/blairy/python_3.8.5]
+929ffb29f4ca: Preparing
+4aa65369d2be: Preparing
+eb2e93e4340b: Preparing
+ca957f31f870: Preparing
+0d05320c72ac: Preparing
+f0d20cb8103a: Preparing
+b343ddcee16c: Preparing
+50644c29ef5a: Preparing
+f0d20cb8103a: Waiting
+b343ddcee16c: Waiting
+50644c29ef5a: Waiting
+0d05320c72ac: Retrying in 5 seconds
+eb2e93e4340b: Pushed
+0d05320c72ac: Retrying in 4 seconds
+0d05320c72ac: Retrying in 3 seconds
+0d05320c72ac: Retrying in 2 seconds
+0d05320c72ac: Retrying in 1 second
+f0d20cb8103a: Retrying in 5 seconds
+f0d20cb8103a: Retrying in 4 seconds
+f0d20cb8103a: Retrying in 3 seconds
+f0d20cb8103a: Retrying in 2 seconds
+f0d20cb8103a: Retrying in 1 second
+0d05320c72ac: Retrying in 10 seconds
+0d05320c72ac: Retrying in 9 seconds
+0d05320c72ac: Retrying in 8 seconds
+0d05320c72ac: Retrying in 7 seconds
+0d05320c72ac: Retrying in 6 seconds
+0d05320c72ac: Retrying in 5 seconds
+0d05320c72ac: Retrying in 4 seconds
+0d05320c72ac: Retrying in 3 seconds
+0d05320c72ac: Retrying in 2 seconds
+0d05320c72ac: Retrying in 1 second
+4aa65369d2be: Retrying in 5 seconds
+4aa65369d2be: Retrying in 4 seconds
+4aa65369d2be: Retrying in 3 seconds
+4aa65369d2be: Retrying in 2 seconds
+4aa65369d2be: Retrying in 1 second
+0d05320c72ac: Pushed
+b343ddcee16c: Layer already exists
+50644c29ef5a: Layer already exists
+ca957f31f870: Pushed
+20200813_112201 - Starting Build.
+
+Sending build context to Docker daemon  5.613MB
+Step 1/9 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/9 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/9 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs     xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev llvm     readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 03c9da2546a8
+Step 4/9 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> a0268bc24f9e
+Step 5/9 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> 52af54a6bcbc
+Step 6/9 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> 8b66746cf270
+Step 7/9 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 7309f1176b24
+Step 8/9 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> f6fbb905d010
+Step 9/9 : ENTRYPOINT ["python3.8"]
+ ---> Using cache
+ ---> 1d40fbfc04b6
+Successfully built 1d40fbfc04b6
+Successfully tagged blairy/python_3.8.5:20200813_112201
+20200813_112202 - Build completed successfully.
+
+
+Already up to date.
