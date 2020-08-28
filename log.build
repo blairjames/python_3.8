@@ -51303,3 +51303,46 @@ Successfully tagged blairy/python_3.8.5:20200828_211701
 
 
 20200828_211701 - git
+[master b9fe683] Automatic build 20200828_211701
+ 1 file changed, 43 insertions(+)
+20200828_211701 - git
+20200828_211701 - git failed!!
+The push refers to repository [docker.io/blairy/python_3.8.5]
+20200828_211701 - Docker push FAILED!!
+
+
+20200828_221701 - Starting Build.
+
+Sending build context to Docker daemon  63.65MB
+Step 1/9 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/9 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/9 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs     xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev llvm     readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 03c9da2546a8
+Step 4/9 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> a0268bc24f9e
+Step 5/9 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> 52af54a6bcbc
+Step 6/9 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> 8b66746cf270
+Step 7/9 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 7309f1176b24
+Step 8/9 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> f6fbb905d010
+Step 9/9 : ENTRYPOINT ["python3.8"]
+ ---> Using cache
+ ---> 1d40fbfc04b6
+Successfully built 1d40fbfc04b6
+Successfully tagged blairy/python_3.8.5:20200828_221701
+20200828_221702 - Build completed successfully.
+
+
+20200828_221702 - git
