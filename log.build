@@ -67153,3 +67153,66 @@ Successfully tagged blairy/python_3.8.5:20200909_091701
 
 
 Already up to date.
+[master e34ce6d] Automatic build 20200909_091701
+ 1 file changed, 63 insertions(+)
+20200909_091709 - git completed successfully.
+The push refers to repository [docker.io/blairy/python_3.8.5]
+929ffb29f4ca: Preparing
+4aa65369d2be: Preparing
+eb2e93e4340b: Preparing
+ca957f31f870: Preparing
+0d05320c72ac: Preparing
+f0d20cb8103a: Preparing
+b343ddcee16c: Preparing
+50644c29ef5a: Preparing
+f0d20cb8103a: Waiting
+b343ddcee16c: Waiting
+50644c29ef5a: Waiting
+ca957f31f870: Layer already exists
+0d05320c72ac: Layer already exists
+4aa65369d2be: Layer already exists
+eb2e93e4340b: Layer already exists
+929ffb29f4ca: Layer already exists
+f0d20cb8103a: Layer already exists
+b343ddcee16c: Layer already exists
+50644c29ef5a: Layer already exists
+20200909_091701: digest: sha256:c9eea49953157635ededd03ab4685999916c7b2d416f6d86eb465bf67779f6e8 size: 2009
+20200909_091718 - Docker push completed successfully.
+
+
+20200909_091718 - All completed successfully
+20200909_101701 - Starting Build.
+
+Sending build context to Docker daemon  112.8MB
+Step 1/9 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/9 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/9 : RUN apk add --no-cache     make git gdbm gdbm-dev util-linux libffi libffi-dbg libffi-dev ncurses5-widec-libs     xz xz-libs xz-dev libbz2 ncurses5-libs tk tk-dev tcl tcl-dev gcc libc-dev llvm     readline-dev sqlite sqlite-dev sqlite-libs zlib-dev libuuid openssl-dev libc-utils
+ ---> Using cache
+ ---> 03c9da2546a8
+Step 4/9 : RUN wget "https://www.python.org/ftp/python/3.8.5/Python-3.8.5.tar.xz"
+ ---> Using cache
+ ---> a0268bc24f9e
+Step 5/9 : RUN     tar -Jxvf ./Python* &&     rm -rf ./Python*.tar.xz &&     mv ./Python* ./python &&     chmod 755 -R /python
+ ---> Using cache
+ ---> 52af54a6bcbc
+Step 6/9 : RUN cd /python && ./configure
+ ---> Using cache
+ ---> 8b66746cf270
+Step 7/9 : RUN cd /python && make -j 8
+ ---> Using cache
+ ---> 7309f1176b24
+Step 8/9 : RUN cd /python && make -j 8 install
+ ---> Using cache
+ ---> f6fbb905d010
+Step 9/9 : ENTRYPOINT ["python3.8"]
+ ---> Using cache
+ ---> 1d40fbfc04b6
+Successfully built 1d40fbfc04b6
+Successfully tagged blairy/python_3.8.5:20200909_101701
+20200909_101702 - Build completed successfully.
+
+
+Already up to date.
