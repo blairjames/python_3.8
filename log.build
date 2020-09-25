@@ -89370,3 +89370,57 @@ Successfully tagged blairy/python_3.8.5:20200925_221701
 
 
 Already up to date.
+[master f003f05] Automatic build 20200925_221701
+ 2 files changed, 63 insertions(+)
+ create mode 100644 .Dockerfile.swp
+20200925_221710 - git completed successfully.
+The push refers to repository [docker.io/blairy/python_3.8.5]
+929ffb29f4ca: Preparing
+4aa65369d2be: Preparing
+eb2e93e4340b: Preparing
+ca957f31f870: Preparing
+0d05320c72ac: Preparing
+f0d20cb8103a: Preparing
+b343ddcee16c: Preparing
+50644c29ef5a: Preparing
+f0d20cb8103a: Waiting
+b343ddcee16c: Waiting
+50644c29ef5a: Waiting
+eb2e93e4340b: Layer already exists
+ca957f31f870: Layer already exists
+929ffb29f4ca: Layer already exists
+0d05320c72ac: Layer already exists
+4aa65369d2be: Layer already exists
+f0d20cb8103a: Layer already exists
+b343ddcee16c: Layer already exists
+50644c29ef5a: Layer already exists
+20200925_221701: digest: sha256:c9eea49953157635ededd03ab4685999916c7b2d416f6d86eb465bf67779f6e8 size: 2009
+20200925_221719 - Docker push completed successfully.
+
+
+20200925_221719 - All completed successfully
+20200925_224147 - Starting Build.
+
+20200925_224147 - Build FAILED!! Aborting.
+
+
+20200925_224150 - Starting Build.
+
+Sending build context to Docker daemon    193MB
+Step 1/4 : FROM alpine:latest
+ ---> a24bb4013296
+Step 2/4 : RUN apk update && apk upgrade
+ ---> Using cache
+ ---> 37bee122e2ee
+Step 3/4 : RUN apk add py3-pip py3-beautifulsoup4
+ ---> Using cache
+ ---> d88cb3aa2ff1
+Step 4/4 : ENTRYPOINT ["python3.8"]
+ ---> Using cache
+ ---> 75052639a00a
+Successfully built 75052639a00a
+Successfully tagged blairy/python_3.8.5:20200925_224150
+20200925_224151 - Build completed successfully.
+
+
+Already up to date.
