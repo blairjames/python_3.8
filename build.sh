@@ -47,8 +47,8 @@ function git () {
 # Push the new tag to Dockerhub.
 function docker_push() {
   echo "docker push command:"
-  echo "docker push blairy/$name:$TIMESTP"
-  if /usr/bin/docker push blairy/$name:$TIMESTP >> $LOG; then 
+  echo "docker push blairy/$NAME:$TIMESTP"
+  if /usr/bin/docker push blairy/$NAME:$TIMESTP >> $LOG; then 
     logger "Docker push completed successfully.\n\n"
   else
     except "Docker push FAILED!!\n\n"
